@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mouse_Tracker : MonoBehaviour
 {
+    private Transform m_transform;
     void Start()
     {
         m_transform = this.transform;
