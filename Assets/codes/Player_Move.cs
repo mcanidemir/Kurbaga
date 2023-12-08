@@ -31,11 +31,11 @@ public class Player_Move : MonoBehaviour
             rb.AddForce(new Vector2(rb.velocity.x, jump));
         }
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D))
         {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
