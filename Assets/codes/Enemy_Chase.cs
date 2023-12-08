@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Enemy_Chase : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
     public float speed;
-    
     private float distance;
     // Start is called before the first frame update
     void Start()
     {
-        
+    player = GameObject.FindWithTag("Player");
+
     }
 
     // Update is called once per frame
