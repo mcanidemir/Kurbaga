@@ -6,6 +6,7 @@ public class Player_Move : MonoBehaviour
 {
     public float speed;
     public float jump;
+    private bool double_jump=false;
 
     private float Move;
 
@@ -26,10 +27,22 @@ public class Player_Move : MonoBehaviour
         //animator.SetFloat("Speed", Mathf.Abs(Move));
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && isJumping == false)
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            if (double_jump)
+            {
+                rb.velocity = Vector2.zero;
+                rb.AddForce(new Vector2(rb.velocity.x, jump));
+                double_jump = false;
+            }
+            else if (!isJumping)
+            {
+                rb.AddForce(new Vector2(rb.velocity.x, jump));
+                double_jump = true;
+                isJumping = true;
+            }
         }
+       
 
         if (Input.GetKey(KeyCode.A))
         {
