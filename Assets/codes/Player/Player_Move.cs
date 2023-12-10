@@ -45,33 +45,27 @@ public class Player_Move : MonoBehaviour
         }
        
 
-        if (Input.GetKey(KeyCode.A))
+
+        //
+        if (gun.transform.rotation.z >=-0.94 && gun.transform.rotation.z <= 0.36)
         {
-        transform.rotation = Quaternion.Euler(0, 180, 0);
-            
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
+            if (gun.transform.rotation.z != 0)
+            {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+               // Debug.Log("b");
 
-        //0.36 -0.92
-        if (gun.transform.rotation.z >=-0.92 && gun.transform.rotation.z <= 0.36)
-        {
-
-            transform.rotation = Quaternion.Euler(0, 0, 0);
-
-
-
+            }
         }
         else 
         {
-
+            if (gun.transform.rotation.z!=0)
+            {
             transform.rotation = Quaternion.Euler(0, 180, 0);
+            //Debug.Log("a");
 
-
+            }
+            //Debug.Log(gun.transform.rotation.z);
         }
-        Debug.Log(gun.transform.rotation.z);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
