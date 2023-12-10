@@ -14,7 +14,7 @@ public class Mouse_Tracker : MonoBehaviour
     void Update()
     {
         LAMouse();
-        Debug.Log(m_transform.position.x);
+        //Debug.Log(m_transform.position.x);
     }
     public void LAMouse()
     {
