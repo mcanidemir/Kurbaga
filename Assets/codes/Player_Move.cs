@@ -29,7 +29,7 @@ public class Player_Move : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (double_jump)
+            if (double_jump && isJumping)
             {
                 rb.velocity = Vector2.zero;
                 rb.AddForce(new Vector2(rb.velocity.x, jump));
@@ -38,7 +38,6 @@ public class Player_Move : MonoBehaviour
             else if (!isJumping)
             {
                 rb.AddForce(new Vector2(rb.velocity.x, jump));
-                double_jump = true;
                 isJumping = true;
             }
         }
@@ -67,6 +66,7 @@ public class Player_Move : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
             isJumping = true;
+            double_jump = true;
         }
     }
 }
