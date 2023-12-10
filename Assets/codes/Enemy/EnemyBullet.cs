@@ -8,6 +8,7 @@ public class EnemyBullet : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    public float damage;
     private float timer;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,12 @@ public class EnemyBullet : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Floor"))
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.GetComponent<Player_HP>().health -= damage;
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Floor"))
         {
             Destroy(gameObject);
         }

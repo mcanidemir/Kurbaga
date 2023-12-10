@@ -8,6 +8,7 @@ public class Player_Move : MonoBehaviour
     public float jump;
     private bool double_jump=false;
     public GameObject gun;
+    private float direction;
 
     private float Move;
 
