@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 805196a4671fa034baea61241c26e65b
+guid: 1e0acfaafe535914ba79c7fa593111c8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1886693947160717108
-    second: tablo-Sheet_0
+      213: 2577618125316660244
+    second: target_dummy-Sheet_0
   - first:
-      213: 4296934778790219247
-    second: tablo-Sheet_1
+      213: -7622796100363632389
+    second: target_dummy-Sheet_1
   - first:
-      213: 4489991276084954279
-    second: tablo-Sheet_2
+      213: 1441900129545031359
+    second: target_dummy-Sheet_2
   - first:
-      213: -3923786024295336329
-    second: tablo-Sheet_3
+      213: -5708203902701579195
+    second: target_dummy-Sheet_3
   - first:
-      213: -5472711585287830589
-    second: tablo-Sheet_4
+      213: -546251700939083718
+    second: target_dummy-Sheet_4
   - first:
-      213: 2967692426100352120
-    second: tablo-Sheet_5
-  - first:
-      213: -2906513105160547125
-    second: tablo-Sheet_6
-  - first:
-      213: 5021643181895421029
-    second: tablo-Sheet_7
+      213: 1557703290216957162
+    second: target_dummy-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tablo-Sheet_0
+      name: target_dummy-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437e4681622ee2a10800000000000000
-      internalID: 1886693947160717108
+      spriteID: 41c9b16370a85c320800000000000000
+      internalID: 2577618125316660244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablo-Sheet_1
+      name: target_dummy-Sheet_1
       rect:
         serializedVersion: 2
-        x: 570
+        x: 310
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fed00d84a67c1ab30800000000000000
-      internalID: 4296934778790219247
+      spriteID: bf0c7928553663690800000000000000
+      internalID: -7622796100363632389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablo-Sheet_2
+      name: target_dummy-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1140
+        x: 620
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a485afc647af4e30800000000000000
-      internalID: 4489991276084954279
+      spriteID: fbe0f1f3788a20410800000000000000
+      internalID: 1441900129545031359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablo-Sheet_3
+      name: target_dummy-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1710
+        x: 930
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 776fb376669eb89c0800000000000000
-      internalID: -3923786024295336329
+      spriteID: 54459f93bc268c0b0800000000000000
+      internalID: -5708203902701579195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablo-Sheet_4
+      name: target_dummy-Sheet_4
       rect:
         serializedVersion: 2
-        x: 2280
+        x: 1240
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c301c01fc50d04b0800000000000000
-      internalID: -5472711585287830589
+      spriteID: a30b29fd8f25b68f0800000000000000
+      internalID: -546251700939083718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tablo-Sheet_5
+      name: target_dummy-Sheet_5
       rect:
         serializedVersion: 2
-        x: 2850
+        x: 1550
         y: 0
-        width: 570
-        height: 320
+        width: 310
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,50 +228,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 874245cb98c5f2920800000000000000
-      internalID: 2967692426100352120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tablo-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 3420
-        y: 0
-        width: 570
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc453efeabdf9a7d0800000000000000
-      internalID: -2906513105160547125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tablo-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 3990
-        y: 0
-        width: 570
-        height: 320
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56c83ad3ed570b540800000000000000
-      internalID: 5021643181895421029
+      spriteID: ae4c6dea3e21e9510800000000000000
+      internalID: 1557703290216957162
       vertices: []
       indices: 
       edges: []

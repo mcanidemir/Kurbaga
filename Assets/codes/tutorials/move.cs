@@ -5,11 +5,15 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     public GameObject chatbox;
+    public Animator Chatbox;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             chatbox.SetActive(true);
+            Chatbox.SetBool("open", true);
+            Chatbox.SetBool("close", false);
         }
     }
 
@@ -17,7 +21,9 @@ public class move : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            chatbox.SetActive(false);
+            Chatbox.SetBool("close",true);
+            Chatbox.SetBool("open",false);
+            //chatbox.SetActive(false);
         }
     }
 }
