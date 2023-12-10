@@ -65,6 +65,7 @@ public class Enemy_Patrol_Spider : MonoBehaviour
         if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
             currentPoint = pointA.transform;
+            Debug.Log("A");
         }
         if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
