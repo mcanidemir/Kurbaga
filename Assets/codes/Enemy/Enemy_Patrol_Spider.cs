@@ -65,11 +65,12 @@ public class Enemy_Patrol_Spider : MonoBehaviour
         if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
         {
             currentPoint = pointA.transform;
-            Debug.Log("A");
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
         {
             currentPoint = pointB.transform;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
     private void FixedUpdate()
