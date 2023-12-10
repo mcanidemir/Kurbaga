@@ -9,6 +9,7 @@ TagManager:
   - Weapon3
   - Walk_Tutorial
   - Gun
+  - Enemy
   layers:
   - Default
   - TransparentFX

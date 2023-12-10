@@ -9,6 +9,7 @@ public class EnemyShooting : MonoBehaviour
 
     private float timer;
     private GameObject player;
+    private bool hasLineOfSight;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,8 @@ public class EnemyShooting : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.transform.position); 
         Debug.Log(distance);
 
+        if (hasLineOfSight)
+        {
         if (distance < 15)
         {
             timer += Time.deltaTime;
@@ -35,7 +38,31 @@ public class EnemyShooting : MonoBehaviour
             }
         }
 
+        }
+
     }
+
+    private void FixedUpdate()
+    {
+        RaycastHit2D[] ray = Physics2D.RaycastAll(transform.position, player.transform.position - transform.position);
+        for(int i = 0; i<ray.Length; i++)
+        {
+
+        if (ray[i].collider != null)
+        {
+            hasLineOfSight = ray[i].collider.CompareTag("Player");
+            if (hasLineOfSight)
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.green);
+            }
+            else
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.red);
+            }
+        }
+        }
+    }
+
 
     void shoot()
     {

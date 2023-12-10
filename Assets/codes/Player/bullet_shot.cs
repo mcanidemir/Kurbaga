@@ -6,6 +6,9 @@ public class bullet_shot : MonoBehaviour
 {
     public float speed = 5f; // Adjust the speed as needed
     private GameObject gun;
+    private float timer;
+
+    public GameObject bullet;
 
     private void Start()
     {
@@ -17,5 +20,14 @@ public class bullet_shot : MonoBehaviour
         rb2D.velocity = transform.right*velocity;
         transform.rotation = Quaternion.Euler(0, 0, gunRotation-45);      
     }
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > 5)
+        {
+            Destroy(bullet);
+        }
+    }
+
 }
 
