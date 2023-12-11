@@ -1634,6 +1634,37 @@ Transform:
   - {fileID: 212137587}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &751087239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751087240}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &751087240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751087239}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.259028, y: 6.3847985, z: -0.50890195}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &787287709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1166953099
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3701,7 +3732,7 @@ MonoBehaviour:
   jump: 750
   gun: {fileID: 167676732}
   arm: {fileID: 334877085}
-  Player_: {fileID: 1763592624}
+  animator: {fileID: 1763592624}
   rb: {fileID: 1763592617}
   isJumping: 0
 --- !u!114 &1763592622
@@ -4499,3 +4530,4 @@ SceneRoots:
   - {fileID: 1628831720}
   - {fileID: 546332274}
   - {fileID: 359480969}
+  - {fileID: 751087240}

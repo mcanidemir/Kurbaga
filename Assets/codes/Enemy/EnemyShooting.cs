@@ -10,6 +10,8 @@ public class EnemyShooting : MonoBehaviour
     private float timer;
     private GameObject player;
     private bool hasLineOfSight;
+    public Animator animator;
+    public GameObject shooting_spider;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,18 +28,31 @@ public class EnemyShooting : MonoBehaviour
 
         if (hasLineOfSight)
         {
-        if (distance < 15)
-        {
-            timer += Time.deltaTime;
-
-
-            if (timer > 1.05)
+            if (distance < 15)
             {
-                timer = 0;
-                shoot();
+                timer += Time.deltaTime;
+
+
+                if (timer > 1.05)
+                {
+                 timer = 0;
+                 shoot();
+                }
+                 animator.SetBool("shooting", true);
+                shooting_spider.SetActive(true);
+            }
+            else
+            {
+
+                animator.SetBool("shooting", false);
+                shooting_spider.SetActive(false);
             }
         }
+        else
+        {
 
+            animator.SetBool("shooting", false);
+                shooting_spider.SetActive(false);
         }
 
     }

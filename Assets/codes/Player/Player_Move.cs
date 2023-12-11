@@ -9,7 +9,7 @@ public class Player_Move : MonoBehaviour
     private bool double_jump=false;
     public GameObject gun;
     public GameObject arm;
-    public Animator Player_;
+    public Animator animator;
 
     private float Move;
 
@@ -25,19 +25,30 @@ public class Player_Move : MonoBehaviour
 
     private void Update()
     {
-        if (!arm.activeSelf)
-        {
-            Player_.SetBool("has_arm", true);
-        }
-        else
-        {
-            Player_.SetBool("has_arm", false);
-        }
+        
 
         Move = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetBool("goes_left", true);
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            animator.SetBool("goes_left", false);
+        }
 
         //animator.SetFloat("Speed", Mathf.Abs(Move));
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+
+
+            if (rb.velocity.x == 0)
+        {
+            animator.SetBool("walking", false);
+        }
+        else
+        {
+            animator.SetBool("walking", true);
+        }
 
         if (Input.GetButtonDown("Jump"))
         {
