@@ -52,6 +52,8 @@ public class Player_Move : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            
+
             if (double_jump && isJumping)
             {
                 rb.velocity = Vector2.zero;
@@ -64,6 +66,11 @@ public class Player_Move : MonoBehaviour
                 isJumping = true;
             }
         }
+            
+        
+        
+            animator.SetFloat("speed", rb.velocity.y);
+        
        
 
 
@@ -94,6 +101,7 @@ public class Player_Move : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
             isJumping = false;
+            animator.SetBool("jump", false);
         }
     }
 
@@ -101,6 +109,7 @@ public class Player_Move : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Floor"))
         {
+            animator.SetBool("jump", true);
             isJumping = true;
             double_jump = true;
         }

@@ -10,6 +10,7 @@ public class Player_Inventory : MonoBehaviour
 
     public bool has_Weapon2;
     public bool has_Weapon3;
+    public Animator anim;
 
     public GameObject weapon2_onFloor;
     public GameObject weapon3_onFloor;
@@ -22,9 +23,23 @@ public class Player_Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Debug.Log("a");
+            anim.SetBool("attack", true);
+        }
+        else
+        {
+            anim.SetBool("attack", false);
+
+        }
         #region weapon1
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            anim.SetBool("punch", true);
+            anim.SetBool("melee", false);
+            anim.SetBool("ranged", false);
+
             Weapon1.SetActive(true);
             Weapon2.SetActive(false);
             Weapon3.SetActive(false);
@@ -36,6 +51,10 @@ public class Player_Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
+                anim.SetBool("punch", false);
+                anim.SetBool("melee", true);
+                anim.SetBool("ranged", false);
+
                 Weapon1.SetActive(false);
                 Weapon2.SetActive(true);
                 Weapon3.SetActive(false);
@@ -48,6 +67,10 @@ public class Player_Inventory : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
+                anim.SetBool("punch", false);
+                anim.SetBool("melee", false);
+                anim.SetBool("ranged", true);
+
                 Weapon1.SetActive(false);
                 Weapon2.SetActive(false);
                 Weapon3.SetActive(true);
