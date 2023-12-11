@@ -47,6 +47,15 @@ public class Enemy_Patrol_Spider : MonoBehaviour
                 }
             }
 
+            if (player.transform.position.x < transform.position.x)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (player.transform.position.x > transform.position.x)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+
         }
         else
         {
