@@ -27,7 +27,6 @@ public class Player_HP : MonoBehaviour
         if (health <= 0)
         {
             timer += Time.deltaTime;
-            anim.SetBool("alive", false);
             if (timer > 1)
             {
             Destroy(player);
