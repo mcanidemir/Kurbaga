@@ -18,7 +18,7 @@ public class bullet_shot : MonoBehaviour
         float gunRotation = gun.transform.rotation.eulerAngles.z;    
         transform.rotation = Quaternion.Euler(0, 0, gunRotation+45);      
         rb2D.velocity = transform.right*velocity;
-        transform.rotation = Quaternion.Euler(0, 0, gunRotation-45);      
+        transform.rotation = Quaternion.Euler(0, 0, gunRotation+45);      
     }
     private void Update()
     {

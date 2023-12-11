@@ -68,7 +68,7 @@ public class Player_Inventory : MonoBehaviour
         if (other.gameObject.CompareTag("Weapon3"))
         {
             has_Weapon3 = true;
-            Destroy(weapon3_onFloor);
+            weapon3_onFloor.SetActive(false);
         }
     }
 }

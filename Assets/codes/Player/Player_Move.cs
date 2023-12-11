@@ -8,7 +8,8 @@ public class Player_Move : MonoBehaviour
     public float jump;
     private bool double_jump=false;
     public GameObject gun;
-    private float direction;
+    public GameObject arm;
+    public Animator Player_;
 
     private float Move;
 
@@ -24,6 +25,15 @@ public class Player_Move : MonoBehaviour
 
     private void Update()
     {
+        if (!arm.activeSelf)
+        {
+            Player_.SetBool("has_arm", true);
+        }
+        else
+        {
+            Player_.SetBool("has_arm", false);
+        }
+
         Move = Input.GetAxis("Horizontal");
 
         //animator.SetFloat("Speed", Mathf.Abs(Move));
