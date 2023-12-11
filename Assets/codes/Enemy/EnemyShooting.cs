@@ -6,6 +6,7 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+    public float bulletdistance;
 
     private float timer;
     private GameObject player;
@@ -28,7 +29,7 @@ public class EnemyShooting : MonoBehaviour
 
         if (hasLineOfSight)
         {
-            if (distance < 15)
+            if (distance < bulletdistance)
             {
                 timer += Time.deltaTime;
 
