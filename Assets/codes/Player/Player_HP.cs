@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Player_HP : MonoBehaviour
 {
+    public Animator anim;
     public float health;
     public float maxHealth;
     public Image healthBar;
@@ -26,7 +27,7 @@ public class Player_HP : MonoBehaviour
         if (health <= 0)
         {
             timer += Time.deltaTime;
-            //death animation
+            anim.SetBool("alive", false);
             if (timer > 1)
             {
             Destroy(player);
