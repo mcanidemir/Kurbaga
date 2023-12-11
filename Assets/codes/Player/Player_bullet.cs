@@ -8,6 +8,7 @@ public class Player_bullet : MonoBehaviour
     public GameObject bullet;
     public GameObject spawnpoint;
     private Vector3 spawnpoint_location;
+    public Animator anim;
     private float timer = 1.5f;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,12 @@ public class Player_bullet : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             player_bullet();
+            anim.SetBool("shoot", true);
+        }
+        else
+        {
+            anim.SetBool("shoot", false);
+
         }
     }
     public void player_bullet()
